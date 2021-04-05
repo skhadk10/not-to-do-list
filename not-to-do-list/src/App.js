@@ -8,12 +8,7 @@ import { AddForm } from "./component/AddForm";
 import { TaskLists } from "./component/ToDoList";
 import { NoToDoList } from "./component/NotToDoList";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  createTask,
-  deletTaskLists,
-  getTaskLists,
-  switchTask,
-} from "./taskApi.js";
+
 // from actions
 import { deleteTasks, fetchTaskLists } from "./component/taskAction.js";
 
