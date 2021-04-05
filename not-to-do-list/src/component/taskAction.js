@@ -28,7 +28,6 @@ export const addTask = (FrmDt) => async (dispatch) => {
 export const fetchTaskLists = () => async (dispatch) => {
   try {
     dispatch(requestPending());
-
     const taskArg = await getTaskLists();
     dispatch(fetchTaskSuccess(taskArg));
   } catch (error) {
@@ -39,10 +38,8 @@ export const fetchTaskLists = () => async (dispatch) => {
 export const taskSwitch = (toUpdate) => async (dispatch) => {
   try {
     dispatch(requestPending());
-
     const result = await switchTask(toUpdate);
     dispatch(updateTaskSuccess(result));
-
     result.status === "success" && dispatch(fetchTaskLists());
   } catch (error) {
     dispatch(requestFail(error.message));

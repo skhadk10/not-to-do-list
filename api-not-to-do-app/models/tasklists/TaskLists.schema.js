@@ -26,6 +26,6 @@ const TaskListSchema = mongoose.Schema(
   }
 )
 
-// creating tables
+// creating tables and Task_list
 const TaskList = mongoose.model('Task_List', TaskListSchema)
 export default TaskList

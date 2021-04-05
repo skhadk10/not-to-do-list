@@ -4,7 +4,7 @@ const initialState = {
   noToDoList: [],
   totalHrs: 0,
   isPending: false,
-  status: "success",
+  status: "",
   message: "",
   itemToDelete: [],
 };

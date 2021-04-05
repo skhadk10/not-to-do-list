@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button, Table, InputGroup, FormControl } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { taskSwitch } from "./taskAction";
 import { setItemToDelete } from "./taskSlice";
