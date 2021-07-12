@@ -57,12 +57,7 @@ export const NoToDoList = () => {
                   data-placement="top"
                   title="it move to TO DO List"
                   onClick={() =>
-                    dispatch(
-                      taskSwitch({
-                        _id: row._id,
-                        todo: true,
-                      })
-                    )
+                    dispatch(taskSwitch({ _id: row._id, todo: true }))
                   }
                 >
                   Mark As TO DO

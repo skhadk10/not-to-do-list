@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Table } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { taskSwitch } from "./taskAction";
@@ -6,7 +6,7 @@ import { setItemToDelete } from "./taskSlice";
 export const TaskLists = () => {
   const dispatch = useDispatch();
   const { taskLists, itemToDelete } = useSelector((state) => state.task);
-
+ 
   return (
     <>
       <h2>
@@ -41,12 +41,7 @@ export const TaskLists = () => {
                   data-placement="top"
                   title="it move to Not TO DO List"
                   onClick={() =>
-                    dispatch(
-                      taskSwitch({
-                        _id: row._id,
-                        todo: false,
-                      })
-                    )
+                    dispatch(taskSwitch({ _id: row._id, todo: false }))
                   }
                 >
                   Mark as not to
