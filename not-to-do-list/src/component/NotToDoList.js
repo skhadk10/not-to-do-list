@@ -61,7 +61,7 @@ export const NoToDoList = () => {
                   }
                 >
                   Mark As TO DO
-                </button>{" "}
+                </button>
               </td>
             </tr>
           ))}

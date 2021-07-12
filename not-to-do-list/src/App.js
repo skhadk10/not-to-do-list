@@ -10,7 +10,7 @@ import { NoToDoList } from "./component/NotToDoList";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // from actions
-import { deleteTasks, fetchTaskLists } from "./component/taskAction.js";
+import { deleteTasks, fetchTaskLists, taskSwitch } from "./component/taskAction.js";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -46,10 +46,10 @@ const App = () => {
         <hr></hr>
         <Row>
           <Col>
-            <TaskLists />
+            <TaskLists taskSwitch={taskSwitch}  />
           </Col>
           <Col>
-            <NoToDoList />
+            <NoToDoList taskSwitch={taskSwitch} />
           </Col>
         </Row>
 
