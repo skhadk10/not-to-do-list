@@ -21,7 +21,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(fetchTaskLists());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="main">
